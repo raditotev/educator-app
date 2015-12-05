@@ -9,9 +9,22 @@ class ApplicationController < ActionController::Base
     if cookies[:educator_locale] && I18n.available_locales.include?(cookies[:educator_locale].to_sym)
       l = cookies[:educator_locale].to_sym
     else
-      l = I18n.default_locale
-      cookies.permanent[:educator_locale] = l
+      begin
+        country_code = request.location.country_code
+        if country_code
+          country_code = country_code.downcase.to_sym
+          #use bulgarian for Bulgaria, Macedonia and Russia
+          [:bg, :mk, :ru].include?(country_code) ? l = :bg : l = :en
+        else
+          l = I18n.default_locale
+        end
+      rescue
+        l = I18n.default_locale
+      ensure
+        cookies.permanent[:educator_locale] = l
+      end
     end
     I18n.locale = l
   end
+
 end

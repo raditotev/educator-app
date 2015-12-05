@@ -22,7 +22,7 @@ bg:
       count:
         one: "%{count} статия"
         other: "%{count} статий"
-      title: "Списъл статии"
+      title: "Списък статий"
     edit:
       title: "Добави статия"
     new:
