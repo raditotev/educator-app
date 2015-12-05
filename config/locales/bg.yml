@@ -1,0 +1,29 @@
+bg:
+  activerecord:
+      attributes:
+          article:
+            title: "Заглавие"
+            body: "Текст"
+
+  forms:
+    messages:
+      success: "Операцията е извършена успешно!"
+    buttons:
+      edit: "Редактирай"
+      submit: "Запази"
+  menu:
+    new_article: "Добави статия"
+    languages:
+      lang: "Език"
+      bg: "Български"
+      en: "English"
+  articles:
+    index:
+      count:
+        one: "%{count} статия"
+        other: "%{count} статий"
+      title: "Списъл статии"
+    edit:
+      title: "Добави статия"
+    new:
+      title: "Нова статия"
