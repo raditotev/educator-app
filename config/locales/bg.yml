@@ -21,8 +21,8 @@ bg:
     index:
       count:
         one: "%{count} статия"
-        other: "%{count} статий"
-      title: "Списък статий"
+        other: "%{count} статии"
+      title: "Списък статии"
     edit:
       title: "Добави статия"
     new:
